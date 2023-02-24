@@ -1,4 +1,8 @@
-﻿using System.Reflection;
+﻿// Abatab.Module.Testing.Action.DataDump.cs
+// b230224.1700
+// Copyright (c) A Pretty Cool Program
+
+using System.Reflection;
 using Abatab.Core.Catalog;
 using Abatab.Core.Logger;
 
@@ -14,9 +18,6 @@ namespace Abatab.Module.Testing.Action
             {
                 case "sessiondetails":
                     LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
-
-
-
 
                     //LogEvent.SessionDetails(sessionDetail);
                     //? session.FinalOptionObject = session.SentOptionObject.ToReturnOptionObject();

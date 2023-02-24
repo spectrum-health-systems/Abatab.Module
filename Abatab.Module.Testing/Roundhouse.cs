@@ -1,10 +1,14 @@
-﻿using System.Reflection;
+﻿// Abatab.Module.Testing.Roundhouse.cs
+// b230224.1700
+// Copyright (c) A Pretty Cool Program
+
+using System.Reflection;
 using Abatab.Core.Catalog;
 using Abatab.Core.Logger;
 
 namespace Abatab.Module.Testing
 {
-    public class Roundhouse
+    public static class Roundhouse
     {
         public static void ParseCommand(SessionProperties sessionProperties)
         {
@@ -19,11 +23,9 @@ namespace Abatab.Module.Testing
 
                 default:
                     LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
-                    // TODO - Should probably put something here to help exit gracefully.
+                    // TODO - Exit gracefully.
                     break;
             }
-
-            LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
         }
     }
 }
