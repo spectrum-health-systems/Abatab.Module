@@ -1,5 +1,5 @@
 ﻿// Abatab.Module.Testing.Action.DataDump.cs
-// b230224.1700
+// b230225.1749
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
@@ -16,8 +16,15 @@ namespace Abatab.Module.Testing.Action
 
             switch (sessionProperties.RequestAction)
             {
-                case "sessiondetails":
+                case "sessioninformation":
                     LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
+
+
+
+                    Core.DataExport.SessionInformation.ToSessionRoot(sessionProperties);
+
+
+                    //Abatab.Core.DataExport.
 
                     //LogEvent.SessionDetails(sessionDetail);
                     //? session.FinalOptionObject = session.SentOptionObject.ToReturnOptionObject();
