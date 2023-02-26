@@ -3,26 +3,27 @@
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
-using Abatab.Core.Catalog;
+using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 
 namespace Abatab.Module.Testing.Action
 {
     internal class DataDump
     {
-        public static void ParseAction(SessionProperties sessionProperties)
+        public static void ParseAction(AbSession abSession)
         {
-            LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
+            LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-            switch (sessionProperties.RequestAction)
+            switch (abSession.RequestAction)
             {
                 case "sessioninformation":
-                    LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-
-
-                    Core.DataExport.SessionInformation.ToSessionRoot(sessionProperties);
-
+                    Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+                    abSession.ReturnOptionObject.SetFieldValue("50004", "T102");
+                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
                     //Abatab.Core.DataExport.
 
@@ -34,7 +35,7 @@ namespace Abatab.Module.Testing.Action
                     break;
 
                 default:
-                    LogEvent.Trace(sessionProperties, Assembly.GetExecutingAssembly().GetName().Name);
+                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
                     // TODO - Exit gracefully.
                     break;
             }
