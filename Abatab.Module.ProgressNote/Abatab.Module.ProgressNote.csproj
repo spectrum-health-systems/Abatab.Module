@@ -41,8 +41,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ParseRequest.cs" />
+    <Compile Include="Action\PlaceOfService.cs" />
+    <Compile Include="Roundhouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Abatab.Core.Catalog\Abatab.Core.Catalog.csproj">
+      <Project>{1b44e970-af13-4188-a6ec-449bf42fa32e}</Project>
+      <Name>Abatab.Core.Catalog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Abatab.Core.DataExport\Abatab.Core.DataExport.csproj">
+      <Project>{9db81d7f-ba9f-4e59-a63f-b00514ac1f40}</Project>
+      <Name>Abatab.Core.DataExport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Abatab.Core.Logger\Abatab.Core.Logger.csproj">
+      <Project>{c94af429-c995-4e3f-9acf-e989fc95f7ea}</Project>
+      <Name>Abatab.Core.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Abatab.Core.Utilities\Abatab.Core.Utilities.csproj">
+      <Project>{88553C90-6BAE-4005-B2CC-FD9A68ADC094}</Project>
+      <Name>Abatab.Core.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
+      <Project>{8151d74c-d8a4-43f8-99e7-3cac9dc06b0e}</Project>
+      <Name>ScriptLinkStandard</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,14 +1,14 @@
-﻿// Abatab.Module.Testing.Roundhouse.cs
-// b230225.1749
+﻿// Abatab.Module.ProgressNote.ParseRequest.cs
+// b230224.1700
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
 using Abatab.Core.Catalog.Definition;
 using Abatab.Core.Logger;
 
-namespace Abatab.Module.Testing
+namespace Abatab.Module.ProgressNote
 {
-    public static class Roundhouse
+    public class Roundhouse
     {
         public static void ParseCommand(AbSession abSession)
         {
@@ -16,18 +16,16 @@ namespace Abatab.Module.Testing
 
             switch (abSession.RequestCommand)
             {
-                case "datadump":
+                case "placeofservice":
                     LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-                    Action.DataDump.ParseAction(abSession);
+                    Action.PlaceOfService.ParseAction(abSession);
 
                     break;
 
                 default:
                     LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
-
                     // TODO - Exit gracefully.
-
                     break;
             }
         }

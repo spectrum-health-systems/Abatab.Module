@@ -19,11 +19,19 @@ namespace Abatab.Module.Testing.Action
                 case "sessioninformation":
                     LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-                    Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-                    abSession.ReturnOptionObject.SetFieldValue("50004", "T102");
-                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
-                    Core.DataExport.SessionInformation.ToSessionRoot(abSession);
-                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    //LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+
+                    //Core.DataExport.SessionInformation.ToSessionRoot(abSession); // ALREADY DONE?
+
+                    //LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    abSession.ReturnOptionObject.ToReturnOptionObject();
+                    //abSession.ReturnOptionObject.ErrorCode = 1;
+                    //abSession.ReturnOptionObject.ErrorMesg = "Hi!";
+
+                    //LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+                    //Core.DataExport.SessionInformation.ToSessionRoot(abSession);
+
+                    //LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
                     //Abatab.Core.DataExport.
 
@@ -35,7 +43,9 @@ namespace Abatab.Module.Testing.Action
                     break;
 
                 default:
+
                     LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+
                     // TODO - Exit gracefully.
                     break;
             }
