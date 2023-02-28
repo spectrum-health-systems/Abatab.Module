@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Abatab.Module.ProgressNote")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Progress Note module for Abatab.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Spectrum Health Systems, Inc")]
+[assembly: AssemblyCompany("A Pretty Cool Program")]
 [assembly: AssemblyProduct("Abatab.Module.ProgressNote")]
-[assembly: AssemblyCopyright("Copyright © Spectrum Health Systems, Inc 2023")]
+[assembly: AssemblyCopyright("Copyright © A Pretty Cool Program")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("23.2.0.0")]
+[assembly: AssemblyFileVersion("23.2.0.0")]
