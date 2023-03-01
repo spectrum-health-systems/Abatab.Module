@@ -1,5 +1,5 @@
 ﻿// Abatab.Module.Testing.Roundhouse.cs
-// b230225.1749
+// b---------x
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
@@ -8,8 +8,10 @@ using Abatab.Core.Logger;
 
 namespace Abatab.Module.Testing
 {
+    /// <summary>Summary goes here.</summary>
     public static class Roundhouse
     {
+        /// <summary>Summary goes here.</summary>
         public static void ParseCommand(AbSession abSession)
         {
             LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);

@@ -1,5 +1,5 @@
-﻿// Abatab.Module.ProgressNote.ParseRequest.cs
-// b230224.1700
+﻿// Abatab.Module.ProgressNote.Roundhouse.cs
+// b---------x
 // Copyright (c) A Pretty Cool Program
 
 using System.Reflection;
@@ -8,8 +8,10 @@ using Abatab.Core.Logger;
 
 namespace Abatab.Module.ProgressNote
 {
-    public class Roundhouse
+    /// <summary>Summary goes here.</summary>
+    public static class Roundhouse
     {
+        /// <summary>Summary goes here.</summary>
         public static void ParseCommand(AbSession abSession)
         {
             LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
