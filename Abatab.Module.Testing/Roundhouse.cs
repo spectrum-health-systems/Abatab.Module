@@ -25,6 +25,13 @@ namespace Abatab.Module.Testing
 
                     break;
 
+                case "errorcode":
+                    LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
+
+                    Action.ErrorCode.ParseAction(abSession);
+
+                    break;
+
                 default:
                     LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 

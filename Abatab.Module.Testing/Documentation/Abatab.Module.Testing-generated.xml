@@ -4,6 +4,9 @@
         <name>Abatab.Module.Testing</name>
     </assembly>
     <members>
+        <member name="T:Abatab.Module.Testing.Action.ErrorCode">
+            <summary>Summary goes here.</summary>
+        </member>
         <member name="T:Abatab.Module.Testing.Roundhouse">
             <summary>Summary goes here.</summary>
         </member>

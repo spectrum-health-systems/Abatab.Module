@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Action\DataDump.cs" />
+    <Compile Include="Action\ErrorCode.cs" />
     <Compile Include="Roundhouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
