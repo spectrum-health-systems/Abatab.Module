@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Action\PlaceOfService.cs" />
+    <Compile Include="Action\VerifyLocation.cs" />
     <Compile Include="Roundhouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

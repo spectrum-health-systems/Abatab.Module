@@ -18,10 +18,10 @@ namespace Abatab.Module.ProgressNote
 
             switch (abSession.RequestCommand)
             {
-                case "placeofservice":
+                case "vfyloc":
                     LogEvent.Trace(abSession, Assembly.GetExecutingAssembly().GetName().Name);
 
-                    Action.PlaceOfService.ParseAction(abSession);
+                    Action.VerifyLocation.ParseAction(abSession);
 
                     break;
 
